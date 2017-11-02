@@ -1,6 +1,6 @@
 ﻿namespace EdcRuleEngine
 {
-    public class Car : ICar
+    public class Car 
     {
         public int Year { get; set; }
         public string Make { get; set; }

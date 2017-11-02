@@ -24,7 +24,7 @@ namespace EdcRuleEngine
             // Create a car that's year and model fail the rules validations      
             Car car1_Bad = new Car
             {
-                Year = 2011,
+                Year = 2015,
                 Make = "El Diablo",
                 Model = "Torche"
             };
@@ -33,7 +33,7 @@ namespace EdcRuleEngine
             Car car2_Good = new Car
             {
                 Year = 2015,
-                Make = "El Diablo",
+                Make = "El Diablo4",
                 Model = "Torch"
             };
 
@@ -43,7 +43,7 @@ namespace EdcRuleEngine
 
             // Iterate through your list of cars to see which ones meet the rules vs. the ones that don't
             cars.ForEach(car => {
-                if (compiledMakeModelYearRules.TakeWhile(rule => rule(car)).Count() > 0)
+                if (compiledMakeModelYearRules.TakeWhile(rule => rule(car)).Count() == 3)
                 {
                     Console.WriteLine(string.Concat("Car model: ", car.Model, " Passed the compiled rules engine check!"));
                 }
